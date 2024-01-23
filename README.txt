@@ -1,14 +1,14 @@
-A classe principal desse projeto é Integration.js
-Nela, temos uma classe abstrata com métodos pré-implementados e com ela devemos implementar cada webscrapper separadamente. Os métodos a serem implementados são:
+The main class of this project is Integration.js
+In it, we have an abstract class with pre-implemented methods and with it we must implement each webscrapper separately. The methods to be implemented are:
 
-- doLogin ->  método com passo a passo de login para cada integração;
-- scrappe -> método para se utilizar após o login na integração.
+- doLogin -> step-by-step login method for each integration;
+- scrappe -> method to use after logging into the integration.
 
-Para instanciar a classe, deve-se, por exemplo:
+To instantiate the class, you must, for example:
 ```
-const rede = new Redecard(true, true, true,"https://meu.userede.com.br/login", "login", "senha");
-await rede.init();
+const network = new Cardo(true, true, true,"https://meu.cardo.com.br/login", "login", "password");
+await network.init();
 await rede.scrappe();
 ```
 
-De primeira instância estamos já bypassando recaptcha, porém, é possível que no método doLogin devamos colocar alguma cláusula para caso o mesmo apareça.
+In the first instance we are already bypassing recaptcha, however, it is possible that in the doLogin method we must add a clause in case it appears.
