@@ -171,12 +171,12 @@ class Integration {
 }
 
 /*
- * Cielo.
+ * Ceu.
  *
- * @class Cielo
+ * @class Céu
  * @extends {Integration}
  */
-class Cielo extends Integration {
+class Ceu extends Integration {
     async doLogin() {
         await this.scrapper.waitForTimeout((Math.floor(Math.random() * 12) + 5) * 1000) 
         await this.scrapper.waitForSelector("input#user");
@@ -198,12 +198,12 @@ class Cielo extends Integration {
 }
 
 /*
- * Redecard.
+ * Reducard.
  *
  * @class Redecard
  * @extends {Integration}
  */
-class Redecard extends Integration {
+class Cardo extends Integration {
     async doLogin() {
         await this.scrapper.waitForSelector("input#user");
         await this.scrapper.waitForSelector("input#password");
@@ -224,12 +224,12 @@ class Redecard extends Integration {
 }
 
 /*
- * Ifood.
+ * EuComida.
  *
- * @class Ifood
+ * @class EuComida
  * @extends {Integration}
  */
-class Ifood extends Integration {
+class EuComida extends Integration {
     async doLogin() {
         await this.scrapper.waitForTimeout((Math.floor(Math.random() * 12) + 5) * 1000) 
         await this.scrapper.waitForSelector("input[type=email]");
@@ -253,7 +253,7 @@ class Ifood extends Integration {
 
 module.exports = {
     Integration,
-    Cielo,
-    Redecard,
-    Ifood
+    Ceu,
+    EuComida,
+    Cardo
 };
